@@ -75,6 +75,9 @@ body {
 
 .energy__button {
   border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .button--disabled {
