@@ -1,11 +1,95 @@
 * {
-	padding: 0px;
-	margin: 0px;
-	border: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(160deg, #1a1a1a, #242424);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background 0.5s;
+}
+
+.main {
+  display: grid;
+  max-width: 500px;
+  text-align: center;
+}
+
+.energy {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px 0 0 20px;
+}
+
+.energy__title {
+  font-size: 2.5rem;
+}
+
+.energy__wrapper {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px 0 0 20px;
+}
+
+.energy__progress {
+  min-height: 20px;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #77ff7c, #4caf50);
+  border-radius: 20px 0 0 20px;
+  transition: width 0.3s ease;
+}
+
+.button {
+  margin-left: 10px;
+  width: 100%;
+  max-width: 80px; 
+  background: #4caf50;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
+
+.energy__button {
+  border: 0;
+}
+
+.button--disabled {
+  background: #81ad82;
+}
+
+.main__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.info__percent {
+  width: 100%;
+  font-size: 8rem;
 }
