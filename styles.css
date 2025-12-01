@@ -78,7 +78,9 @@ body {
 }
 
 .button--disabled {
-  background: #81ad82;
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .main__info {
