@@ -40,6 +40,7 @@ body {
 
 .energy__title {
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 .energy__wrapper {
