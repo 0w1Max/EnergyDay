@@ -27,8 +27,14 @@ body {
 .main {
   display: grid;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   text-align: center;
+}
+
+.main__energy {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .language {
@@ -62,7 +68,7 @@ body {
 }
 
 .energy__title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -100,9 +106,6 @@ body {
 
 .energy__button {
   border: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 
 .button--disabled {
@@ -117,6 +120,9 @@ body {
   align-items: center;
   margin-top: 1rem;
   width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .info__percent {
