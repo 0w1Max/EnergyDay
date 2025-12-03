@@ -26,8 +26,31 @@ body {
 
 .main {
   display: grid;
-  max-width: 500px;
+  width: 100%;
+  max-width: 450px;
   text-align: center;
+}
+
+.language {
+  position: absolute;
+  top: 1rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
 }
 
 .energy {
@@ -61,7 +84,8 @@ body {
 }
 
 .button {
-  margin-left: 10px;
+  margin-left: 0.6rem;
+  padding: 0.3rem 0;
   width: 100%;
   max-width: 80px; 
   background: #4caf50;

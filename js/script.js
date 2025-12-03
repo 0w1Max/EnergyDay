@@ -1,3 +1,7 @@
+import dictionary from "./lang.js";
+
+const langSelect = document.getElementById('lang');
+const energyTitle = document.querySelector('.energy__title');
 const energyProgress = document.querySelector('.energy__progress');
 const infoPercent = document.querySelector('.info__percent');
 const energyButton = document.querySelector('.energy__button');
@@ -9,6 +13,13 @@ const COLORS = {
   red: 'linear-gradient(90deg, #ff7c7c, #ff4d4d)',
   orange: 'linear-gradient(90deg, #ffc97c, #ff9900)',
   green: 'linear-gradient(90deg, #77ff7c, #4caf50)',
+}
+
+function langHandler(evt) {
+  const lang = evt.target.value;
+
+  energyTitle.textContent = dictionary[lang].title;
+  energyButton.textContent = dictionary[lang].button;
 }
 
 function increaseProgress(step) {
@@ -83,4 +94,5 @@ function buttonHandler(evt) {
 
 renderProgress(energyProgress, infoPercent);
 
+langSelect.addEventListener('change', langHandler);
 energyButton.addEventListener('click', buttonHandler);

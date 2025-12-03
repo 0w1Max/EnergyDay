@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,13 @@
   </head>
   <body>
     <main class="main">
+      <form class="language" aria-label="Language selector">
+        <label for="lang" class="sr-only">Choose language / Выберите язык</label>
+        <select id="lang" name="lang">
+          <option value="en" selected>English</option>
+          <option value="ru">Русский</option>
+        </select>
+      </form>
       <div class="main__energy">
         <h1 class="energy__title">Energy of the day</h1>
         <div class="energy">
