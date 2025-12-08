@@ -21,7 +21,13 @@
         <h1 class="energy__title">Energy of the day</h1>
         <div class="energy">
           <div class="energy__wrapper">
-            <div class="energy__progress"></div>
+            <div 
+              class="energy__progress"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0">
+            </div>
           </div>
           <button class="energy__button button">Charge</button>
         </div>

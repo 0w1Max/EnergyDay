@@ -27,22 +27,26 @@ function increaseProgress(step) {
 }
 
 function decreaseProgress(step) {
-  PROGRESS_DATA = Math.min(100, Math.max(PROGRESS_DATA - step, 0));
+  PROGRESS_DATA = Math.min(100, Math.max(PROGRESS_DATA - step, 0))
 }
 
 function resetProgress() {
-  PROGRESS_DATA = 0;
+  PROGRESS_DATA = 0
+}
+
+function updateAriaProgress(view) {
+  view.setAttribute("aria-valuenow", PROGRESS_DATA)
 }
 
 function updateProgressColor(view) {
   let gradient;
 
   if (PROGRESS_DATA <= 33) {
-    gradient = COLORS.red;
+    gradient = COLORS.red
   } else if (PROGRESS_DATA <= 66) {
-    gradient = COLORS.orange;
+    gradient = COLORS.orange
   } else {
-    gradient = COLORS.green;
+    gradient = COLORS.green
   }
 
   view.style.background = gradient;
@@ -50,11 +54,11 @@ function updateProgressColor(view) {
 
 function updateButtonState(button) {
   if (PROGRESS_DATA >= 100) {
-    button.disabled = true
-    button.classList.add("button--disabled")
+    button.disabled = true;
+    button.classList.add("button--disabled");
   } else {
-    button.disabled = false
-    button.classList.remove("button--disabled")
+    button.disabled = false;
+    button.classList.remove("button--disabled");
   }
 }
 
@@ -62,6 +66,7 @@ function renderProgress(view, text) {
   view.style.width = `${PROGRESS_DATA}%`;
   text.textContent = `${PROGRESS_DATA}%`;
 
+  updateAriaProgress(view);
   updateProgressColor(view);
   updateButtonState(energyButton);
 }
@@ -72,7 +77,7 @@ function animateDecrease(step = 1, interval = 20) {
     renderProgress(energyProgress, infoPercent);
 
     if (PROGRESS_DATA <= 0) {
-      clearInterval(timer);
+      clearInterval(timer)
     }
   }, interval);
 }
