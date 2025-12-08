@@ -1,3 +1,9 @@
+:root {
+  --white-fade: rgba(255,255,255,0.1);
+  --green-light: #77ff7c;
+  --green-dark: #4caf50;
+}
+
 *,
 *::before,
 *::after {
@@ -17,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   transition: background 0.5s;
 }
 
@@ -38,7 +44,7 @@ body {
   position: absolute;
   top: 1rem;
   right: 2rem;
-  background: rgba(255,255,255,0.1);
+  background: var(--white-fade);
   color: #fff;
   padding: 0.5rem;
   border-radius: 8px;
@@ -60,8 +66,8 @@ body {
   display: flex;
   margin-top: 1rem;
   padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px 0 0 20px;
+  background: var(--white-fade);
+  border-radius: 20px 20px 20px 20px;
 }
 
 .energy__title {
@@ -80,9 +86,9 @@ body {
 .energy__progress {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #77ff7c, #4caf50);
+  background: linear-gradient(90deg, var(--green-light), var(--green-dark));
   border-radius: 20px 0 0 20px;
-  transition: width 0.3s ease;
+  transition: width 0.25s ease-in-out;
 }
 
 .button {
@@ -94,6 +100,7 @@ body {
   font-size: 0.8rem;
   font-weight: bold;
   color: #fff;
+  border-radius: 0 20px 20px 0;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
