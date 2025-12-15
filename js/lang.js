@@ -1,4 +1,4 @@
-const dictionary = {
+export const dictionary = {
   ru: {
     title: "Энергия дня",
     button: "Зарядить",
@@ -8,5 +8,3 @@ const dictionary = {
     button: "Charge",
   },
 };
-
-export default dictionary;

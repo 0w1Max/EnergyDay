@@ -1,4 +1,5 @@
-import dictionary from "./lang.js";
+import { dictionary } from "./lang.js";
+import { lock } from "./utils.js";
 
 const langSelect = document.getElementById('lang');
 const energyTitle = document.querySelector('.energy__title');
@@ -97,7 +98,9 @@ function buttonHandler(evt) {
   }
 }
 
+const safeCharge = lock(buttonHandler, 300);
+
 renderProgress(energyProgress, infoPercent);
 
 langSelect.addEventListener('change', langHandler);
-energyButton.addEventListener('click', buttonHandler);
+energyButton.addEventListener('click', safeCharge);
